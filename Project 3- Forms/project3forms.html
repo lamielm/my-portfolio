@@ -3,33 +3,114 @@
   <head>
     <!--
         NAME: Landon Lamie
-        DATE: 10/17/2024
+        DATE: 10/21/2024
         PROJ: Project 3
-        DESC: Hire Me form
+        DESC: Homework Help Form
     -->
     <meta charset="UTF-8">
     <title>Project 3- forms</title>
-    <style>
-      
+    <!--I don't like boring, so I made the form have *style* :D -->
+    <style> 
+        body {
+            background-color: #E0FFFF;
+        }
+        p {
+            max-width: 450px;
+        }
+        button {
+            border: none; 
+            background-color: rgb(97, 97, 255)
+        }
+        button:hover {
+            background-color: #E0FFFF;
+        }
+        form {
+            background-color: rgb(97, 97, 255);
+            width: fit-content;
+            margin: 40px;
+            padding: 20px;
+            border: 10px solid black;
+            border-radius: 50px;
+            
+        }
+        .greenText {
+            color: rgb(80, 133, 0);
+            background-color: rgb(212, 212, 212);
+        }
     </style>
   </head>
   <body>
-    <form method="get" action="#">
+    <form method="get" action="#"> 
+        <h1>Homework Help form</h1>
+        <p>The purpose of this form is to allow you to demonstrate your current experience level in school, allowing us to pair you with a student of equal or lower experience!</p> <!--Explain to the user what the purpose of the form is-->
         <table>
             <tr>
                 <td>Name:</td>
                 <td><input type="text" name="userName" id="userName"></td>
+            </tr>
             <tr>
                 <td>Password</td>
                 <td><input type="password" name="userPassword" id="userPassword"></td>
             </tr>
             <tr>
-                <td>T-Shirt Size</td>
-                <td><input type="checkbox"></td>
+                <td>Experience Level:</td>
+                <td>
+                    <label>
+                        <input type="radio" name="experience_level" value="none" id="experience_none" accesskey="n"><span class="greenText">N</span>one</label> <!--Note: alt-access key is how you use it-->
+                        <!--I'm not a fan of the way the text looks, but for the assignment I will leave it ;P -->
+                    <br>
+                    <label>
+                        <input type="radio" name="experience_level" value="beginner" id="experience_beginner" accesskey="b"><span class="greenText">B</span>eginner</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="experience_level" value="intermediate" id="experience_intermediate" accesskey="i"><span class="greenText">I</span>ntermediate</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="experience_level" value="advanced" id="experience_advanced" accesskey="a"><span class="greenText">A</span>dvanced</label>
+                </td>
+
             </tr>
             <tr>
-                <td><button type="submit">Place Holder (insert image)</button></td>
-                <td><button type="reset">Reset</button></td>
+                <td>Specialty</td>
+                <td>
+                    <label><input type="checkbox" name="specialty" value="computer_science" id="specialty_cs" accesskey="c"><span class="greenText">C</span>omputer Science</label>
+                    <br>
+                    <label><input type="checkbox" name="specialty" value="math" id="specialty_math" accesskey="m"><span class="greenText">M</span>athematics</label>
+                    <br>
+                    <label><input type="checkbox" name="specialty" value="history" id="specialty_history" accesskey="h"><span class="greenText">H</span>istory</label>
+                    <br>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>
+                    <select name="education" id="education">
+                        <option value="" disabled selected>Select an option</option> <!--Made the option disabled selected to make a default starting point, but not allow user to use that as their selection-->
+                        <optgroup label="Community College"> <!--I like the optgroup because it groups things in a readable manner.-->
+                        <option value="KVCC">Kalamazoo Valley Community College</option>
+                        </optgroup>
+                        <optgroup label="Division II">
+                        <option value="GVSU">Grand Valley State University</option>
+                        </optgroup>
+                        <optgroup label="Division I">
+                        <option value="WMU">Western Michigan University</option>
+                        <option value="MSU">Michigan State University</option>
+                        <option value="UoM">University of Michigan</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Feedback</td>
+                <td>
+                    <textarea name="comments" id="comments" placeholder="Please leave any feedback:" rows="6" cols="33"></textarea> <!--The "placeholder" makes it so that when the user hasn't typed anything, it has a gray message as a filler.-->
+                </td>
+
+            </tr>
+            <tr>
+                <td><button type="submit"><img src="Images/submit_button.png" width="106" height="44"  alt="Image of submit button"></button></td>
+                <td><button type="reset"><img src="Images/reset_button.png" width="121" height="44" alt="Image of reset button"></button></td>
             </tr>
         </table>
     </form>
