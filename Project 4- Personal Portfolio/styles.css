@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    background-color: #F5F5F5; /* Soft Gray */
+    color: #333; /* Dark Gray for text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+#header {
+    background-color: #003366; /* Deep Blue */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* About Me Section */
+div {
+    padding: 20px;
+    outline: 8px solid #0076B5;
+}
+
+
+/* Degrees, Certifications, Hobbies Section */
+h2 {
+    color: #003366; /* Deep Blue */
+    border-bottom: 2px solid #FF5722; /* Bright Orange underline */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #FFF9C4; /* Soft Yellow */
+    padding: 20px;
+}
+
+
+a {
+    color: #4CAF50;
+}
+
+a:hover {
+    color: #337936;
+}
+
+/* Footer Styles */
+#footer {
+    background-color: #003366; /* Deep Blue */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styles (if you add buttons later) */
+button {
+    background-color: #FF5722; /* Bright Orange */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #D45D1D; /* Darker Orange for hover effect */
+}
+
+/* Success Message Styles (if needed) */
+.success-message {
+    background-color: #4CAF50; /* Vibrant Green */
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+/* Colors to use:
+Deep Blue (#003366)
+
+Vibrant Green (#4CAF50)
+
+Bright Orange (#FF5722)
+
+Soft Gray (#F5F5F5)
+*/
