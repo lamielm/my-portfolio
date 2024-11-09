@@ -1,36 +1,128 @@
 /* General Styles */
-body {
-    background-color: #F5F5F5; /* Soft Gray */
+
+html { /* This is used to make it so that when you click on a navbar item, the navbar that is "sticky" won't cover the content you're navigating to */
+    scroll-padding-top: 60px;
+}
+
+body { 
+    background-color: #888888; /* Soft Gray */
     color: #333; /* Dark Gray for text */
     font-family: Arial, sans-serif;
     margin: 0;
+    padding-top: 0;
+}
+
+/* Main container */
+.main-container {
+    width: 80%;
+    margin: auto;
+    background-color: #F5F5F5;
+    color: 333;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-right: 40px;
+    padding-left: 40px;
+
+}
+
+/* Navigation Bar */
+#nav-bar {
+    position: sticky; /* Make the nav bar sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure it stays above other content when scrolling */
+}
+
+#nav-bar ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border: 5px solid black;
+    
+}
+  
+#nav-bar li {
+    float: left;
+    border-right: 2px solid black; /* Small black line between items */
+
+}
+
+  
+#nav-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+#nav-bar li a:hover {
+    background-color: #111;
 }
 
 /* Header Styles */
 #header {
+    border: 5px solid black;
     background-color: #003366; /* Deep Blue */
     color: #FFFFFF; /* White text */
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    
 }
 
 /* About Me Section */
-div {
-    padding: 20px;
-    outline: 8px solid #0076B5;
+
+.linkedin {
+    float: right;
+    margin-left: 20px; /* Space between the image and the text */
+    width: 200px; /* Fixed width for the image */
+    max-width: 30%; /* Allows responsiveness */
+    border: 1px solid blue;
+    margin-bottom: 20px; /* Ensures the image has space below it */
 }
 
 
 /* Degrees, Certifications, Hobbies Section */
 h2 {
-    color: #003366; /* Deep Blue */
-    border-bottom: 2px solid #FF5722; /* Bright Orange underline */
+    color: #003366; 
+    border-bottom: 2px solid #FF5722; 
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+    padding: 20px;
+}
+
+
+#degrees {
+    position: relative;
+    margin: 0;
+}
+
+
+.graduation-img {
+    float: right;
+    margin-left: 20px; 
+    width: auto; 
+    max-height: 120px; /* Had to dance with this to make img fit between the classes.  Is there a better way? */
+    border: 1px solid black;
+    margin-bottom: 20px; /* Ensures the image has space below it */
+}
+
+.graduation-img:hover {
+    transform: scale(1.5); /* Scale up the image by 20% */
+    margin-right: 10px;
+    border: 1px solid black;
+    margin-bottom: 20px; /* Maintain bottom margin */
+}
+
+.linux-img {
+    float: right;
+    margin-left: 20px; 
+    width: auto; 
+    max-height: 90px; /* Had to dance with this to make img fit between the classes.  Is there a better way? */
+    border: 1px solid black;
+    margin-bottom: 20px;
 }
 
 /* Contact Section */
@@ -54,34 +146,9 @@ a:hover {
     color: #FFFFFF; /* White text */
     text-align: center;
     padding: 10px 0;
-    position: relative;
     bottom: 0;
     width: 100%;
 }
-
-/* Button Styles (if you add buttons later) */
-button {
-    background-color: #FF5722; /* Bright Orange */
-    color: #FFFFFF; /* White text */
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #D45D1D; /* Darker Orange for hover effect */
-}
-
-/* Success Message Styles (if needed) */
-.success-message {
-    background-color: #4CAF50; /* Vibrant Green */
-    color: #FFFFFF;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-
 
 /* Colors to use:
 Deep Blue (#003366)
