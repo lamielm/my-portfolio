@@ -1,129 +1,172 @@
-/* General Styles */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
+/* General */
 body {
-  color: #333;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif; 
 }
 
-/* Header */
-header {
-  background-color: #003366;
-  color: #fff;
-  text-align: center;
-  padding: 1em;
-}
-
-.navbar ul {
+.row {
   display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
+  flex-wrap: wrap;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img-right {
+  float: right;
+}
+
+.img-left {
+  float: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 5px;
+}
+/* Top */
+header {
+  text-align: center;
+  padding: 1em;
   background-color: #333;
+  color: orange;
 }
 
-.navbar li {
-  margin: 0 1em;
+header h1 {
+  font-size: 50px;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* top Content as Grid */
-top {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-  padding: 1em;
-}
-
-.content {
-  grid-template-columns: 40% 20% 20%;
-}
-
-.content-section {
-  background-color: #fff;
-  padding: 1em;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.content-section h2 {
-  color: #003366;
-  margin-bottom: 0.5em;
-}
-#certifications {
-  width: 40%;
-}
-#hobbies {
-  width: 40%;
-}
-
-/* Contact Section Full Width */
-#contact {
-  grid-column: 1 / -1; /* Makes contact span the entire row */
-  text-align: center;
-}
-
-/* Footer Full Width */
-footer {
-  text-align: center;
-  padding: 1em;
+nav {
   background-color: #003366;
-  color: white;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
 
-/* Responsive Design */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+}
 
-/* Mobile */
-@media (max-width: 600px) {
-  .navbar ul {
-    flex-direction: column;
-  }
+nav li {
+  padding: 10px;
+  flex: auto;
+}
 
-  .navbar li {
-    margin: 0.5em 0;
-  }
+nav a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+nav a:hover {
+  text-decoration: underline;
+  color: whitesmoke;
+}
 
-  /* Stack degrees, certifications, and hobbies vertically */
-  #degrees, #certifications, #hobbies {
-    grid-column: 1 / -1; /* Each section takes the full width */
+
+/* Middle */
+.container {
+  background-color: #cacaca;
+  padding: 10px;
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about {
+  padding: 2rem;
+  background-color: #cacaca;
+  border: 2px solid #003366;
+}
+
+.degrees {
+  padding: 2rem;
+  background-color: #cacaca;
+  border: 2px solid #003366;
+}
+
+.certifications {
+  padding: 2rem;
+  background-color: #cacaca;
+  border: 2px solid #003366;
+}
+
+.hobbies {
+  padding: 2rem;
+  background-color: #cacaca;
+  border: 2px solid #003366;
+}
+
+
+
+
+/* Bottom */
+.footer {
+  background-color: #003366; /* Deep Blue */
+  color: #FFFFFF; /* White text */
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#contact {
+  background-color: #FFF9C4; /* Soft Yellow */
+  padding: 20px;
+}
+
+
+/* RWD */
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+  img {
+    max-width: 30%;
   }
 }
 
-/* Tablet */
-@media (min-width: 600px) {
-  top {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop */
-@media (min-width: 992px) {
-  top {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-  }
-
-  /* Make the About section span two columns */
-  #about {
-    grid-column: span 2;
-  }
-
-  /* Contact section spans full row on desktop */
-  #contact {
-    grid-column: 1 / -1;
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  img {
+    width: auto;
   }
 }
